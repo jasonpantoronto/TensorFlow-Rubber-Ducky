@@ -1,0 +1,25 @@
+model:
+  type: CNN
+  input_shape: [224, 224, 3]
+  num_classes: 2
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+
+database:
+  host: localhost
+  port: 5432
+  user: your_username
+  password: your_password
+  db_name: rubber_duck_db
+
+camera:
+  width: 640
+  height: 480
+  fps: 30
+
+paths:
+  training_data: data/training/rubber_ducks
+  test_data: data/test/rubber_ducks
+  model_save_path: models/rubber_duck_model.h5
+  database_path: rubber_duck_db.sqlite
